@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  background-color: hsl(0, 0%, 86%);
+  font-family: "Poppins";
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  
+  font-size: 16px;
+}
+
+.wrapper {
+  width: 35rem;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  border-bottom-right-radius: 25%;
+  background-color: hsl(0, 0%, 100%);
+  margin: auto 0;
+}
+
+.age-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+
+label{
+  text-transform: uppercase;
+}
+.input-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-selector input {
+  width: 110px;
+  padding: 10px;
+  margin-right: 4rem;
+  border-radius: 0.5rem;
+  font-size: 32px;
+  font-weight: 700;
+  border-width: 1.2px;
+  border-color: hsl(0, 0%, 86%);
+}
+
+input:focus {
+  outline: 0;
+}
+
+.input-selector.error input {
+  border-color: hsl(0, 100%, 67%);
+}
+
+.error {
+  color: hsl(0, 100%, 67%);
+  font-size: .9rem;
+}
+.line-div {
+  margin-top: 1rem;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.line {
+  width: 100%;
+  background-color: hsl(0, 0%, 86%);
+  height: 2px;
+  position: absolute;
+}
+
+.circle {
+  display: inline-block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  left: calc(60% - 60px);
+  transform: translate(-50%, -50%);
+  background-color: hsl(259, 100%, 65%);
+}
+
+.circle:hover {
+  cursor: pointer;
+}
+
+.svg-image {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.7rem;
+}
+
+
+.age-display p {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 4.4rem;
+  
+}
+
+.age-display p span {
+  color: hsl(259, 100%, 65%);
+  letter-spacing: 0.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    width: 45rem;
+    padding: 2rem 3rem;
+    border-bottom-right-radius: 25%;
+  }
+
+  .age-form {
+    display: flex;
+    justify-content: left;
+    /* align-items: center; */
+  }
+
+  .line {
+    width: 90%;
+    background-color: hsl(0, 0%, 86%);
+    height: 2px;
+    position: absolute;
+  }
+
+  .circle {
+    display: inline-block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    left: calc(80% + 61px);
+    transform: translate(-50%, -50%);
+    background-color: hsl(259, 100%, 65%);
+  }
+
+}
