@@ -4,25 +4,24 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   background-color: hsl(0, 0%, 86%);
   font-family: "Poppins";
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-  
   font-size: 16px;
+  width: 100vw;
 }
 
 .wrapper {
-  width: 35rem;
-  padding: 3rem;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 20rem;
+  padding-top: 3rem;
+  padding-left: 1.2rem;
   border-radius: 1.5rem;
   border-bottom-right-radius: 25%;
   background-color: hsl(0, 0%, 100%);
-  margin: auto 0;
 }
 
 .age-form {
@@ -30,9 +29,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 3rem;
-}
+  padding-right: 1rem;
 
-label{
+}
+label {
   text-transform: uppercase;
 }
 .input-selector {
@@ -42,11 +42,10 @@ label{
 }
 
 .input-selector input {
-  width: 110px;
-  padding: 10px;
-  margin-right: 4rem;
+  width: 5rem;
+  padding: .5rem;
   border-radius: 0.5rem;
-  font-size: 32px;
+  font-size: 1.5rem;
   font-weight: 700;
   border-width: 1.2px;
   border-color: hsl(0, 0%, 86%);
@@ -62,10 +61,11 @@ input:focus {
 
 .error {
   color: hsl(0, 100%, 67%);
-  font-size: .9rem;
+  font-size: .5rem;
 }
+
 .line-div {
-  margin-top: 1rem;
+  margin-top: .5rem;
   position: relative;
   margin-bottom: 3rem;
 }
@@ -82,13 +82,14 @@ input:focus {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  left: calc(60% - 60px);
+  left: calc(60% - 45px);
   transform: translate(-50%, -50%);
   background-color: hsl(259, 100%, 65%);
 }
 
 .circle:hover {
   cursor: pointer;
+  background: hsl(0, 0%, 8%);
 }
 
 .svg-image {
@@ -100,21 +101,24 @@ input:focus {
 }
 
 
+.age-display{
+  margin-bottom: 1rem ;
+}
 .age-display p {
   font-weight: 800;
   font-style: italic;
-  font-size: 4.4rem;
+  font-size: 3rem;
   
 }
 
 .age-display p span {
   color: hsl(259, 100%, 65%);
-  letter-spacing: 0.8rem;
+  letter-spacing: 0.4rem;
 }
 
 @media screen and (min-width: 1024px) {
   .wrapper {
-    width: 45rem;
+    width: 40rem;
     padding: 2rem 3rem;
     border-bottom-right-radius: 25%;
   }
@@ -122,7 +126,22 @@ input:focus {
   .age-form {
     display: flex;
     justify-content: left;
-    /* align-items: center; */
+    gap: 3rem;
+  }
+
+  .input-selector input {
+    width: 6.7rem;
+    padding: .7rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-width: 1.2px;
+    border-color: hsl(0, 0%, 86%);
+  }
+
+  .error {
+    color: hsl(0, 100%, 67%);
+    font-size: .9rem;
   }
 
   .line {
