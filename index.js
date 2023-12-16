@@ -111,8 +111,6 @@ const isValidDate = (dayField, monthField, yearField) => {
     checkDate
   ) {
     setError(dayField, "Invalid Date");
-  } else {
-    removeError(dayField);
   }
 };
 
@@ -121,6 +119,14 @@ const validateInputs = () => {
   validateEmptyFields({ target: day });
   validateEmptyFields({ target: month });
   validateEmptyFields({ target: year });
+
+  if (validData == false) return;
+  validateDate({ target: day });
+  if (validData == false) return;
+  validateMonth({ target: month });
+  if (validData == false) return;
+  validateYear({ target: year });
+  if (validData == false) return;
 };
 
 const calculateAge = () => {
@@ -128,7 +134,6 @@ const calculateAge = () => {
 
   const [currentDay, currentMonth, currentYear] = getCurrentDateData();
 
-  console.log("yearvalue:", yearValue);
   let ageYears = currentYear - yearValue;
   let ageMonths = currentMonth - monthValue;
   let ageDays = currentDay - dayValue;
