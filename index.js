@@ -186,3 +186,8 @@ function validateAndCalculate() {
     calculateAge();
   }
 }
+
+function numberInput(element){
+  let data = element.value.replace(/\D/g, "");
+  element.value= data;
+}

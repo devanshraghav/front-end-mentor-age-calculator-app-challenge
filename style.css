@@ -162,4 +162,11 @@ input:focus {
     background-color: hsl(259, 100%, 65%);
   }
 
+  .age-display p {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 4rem;
+  }
+  
+
 }
